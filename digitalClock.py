@@ -21,14 +21,15 @@ class DigitalClock(QWidget):
     
     self.time_label.setAlignment(Qt.AlignCenter)
     
-    self.time_label.setStyleSheet("font-size: 150px;"
+    self.time_label.setStyleSheet("font-size: 140px;"
                                   "font-family: Arial;"
-                                  "color: hsl(111, 100%, 50%);")
+                                  "color: hsl(111, 100%, 50%);"
+                                  "padding: 5px 20px;")
     self.setStyleSheet("background-color: black")
     self.update_time()
     
   def update_time(self):
-    current_time = QTime.currentTime().toString("hh:mm:ss")
+    current_time = QTime.currentTime().toString("hh:mm:ss AP")
     self.time_label.setText(current_time)
   
 if __name__ == "__main__":
